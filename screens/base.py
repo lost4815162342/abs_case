@@ -63,7 +63,7 @@ class BaseScreen:
         ScreenClass = screens.catalog.get(screen_name)
         return ScreenClass(self.driver)
 
-    @allure.title('Заполнение данных формы')
+    @allure.step('Заполнение данных формы')
     def input_data(self, data):
         for element_name, value in data.items():
             self.input(element_name, value)
